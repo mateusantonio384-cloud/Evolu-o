@@ -1,0 +1,5 @@
+{
+  "name": "Evolução",
+  "description": "A modern and functional To-Do list application inspired by TickTick, built with React, TypeScript, and Tailwind CSS. It allows users to add, delete, and mark tasks as complete, with all data persisted in the browser's local storage.",
+  "requestFramePermissions": []
+}
