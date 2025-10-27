@@ -7,13 +7,15 @@ const LONG_BREAK_DURATION = 15 * 60;
 
 type Mode = 'pomodoro' | 'shortBreak' | 'longBreak';
 
-const PomodoroTimer: React.FC = () => {
+interface PomodoroTimerProps {
+  onAlarm: () => void;
+}
+
+const PomodoroTimer: React.FC<PomodoroTimerProps> = ({ onAlarm }) => {
   const [mode, setMode] = useState<Mode>('pomodoro');
   const [timeRemaining, setTimeRemaining] = useState(POMODORO_DURATION);
   const [isActive, setIsActive] = useState(false);
   const [pomodorosCompleted, setPomodorosCompleted] = useState(0);
-
-  const alarmSoundRef = useRef<HTMLAudioElement>(null);
 
   const handleModeChange = useCallback((newMode: Mode) => {
     if (isActive) {
@@ -46,7 +48,7 @@ const PomodoroTimer: React.FC = () => {
         setTimeRemaining(prev => prev - 1);
       }, 1000);
     } else if (isActive && timeRemaining === 0) {
-      alarmSoundRef.current?.play();
+      onAlarm();
       setIsActive(false);
 
       if (mode === 'pomodoro') {
@@ -67,7 +69,7 @@ const PomodoroTimer: React.FC = () => {
         clearInterval(interval);
       }
     };
-  }, [isActive, timeRemaining, mode, pomodorosCompleted]);
+  }, [isActive, timeRemaining, mode, pomodorosCompleted, onAlarm]);
 
   // Update document title with remaining time
   useEffect(() => {
@@ -139,8 +141,6 @@ const PomodoroTimer: React.FC = () => {
       </div>
       
       <p className="mt-6 text-sm text-gray-500 dark:text-gray-400">Pomodoros concluídos: {pomodorosCompleted}</p>
-
-      <audio ref={alarmSoundRef} src="https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg" preload="auto"></audio>
     </div>
   );
 };

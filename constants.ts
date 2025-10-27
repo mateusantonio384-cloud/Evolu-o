@@ -27,7 +27,7 @@ interface BackgroundColor {
 export const BACKGROUND_COLORS: Record<string, BackgroundColor> = {
   default: { name: 'Padrão', className: 'bg-gray-100 dark:bg-zinc-900', lightClass: 'bg-gray-100' },
   slate: { name: 'Ardósia', className: 'bg-slate-200 dark:bg-slate-900', lightClass: 'bg-slate-200' },
-  red: { name: 'Vermelho', className: 'bg-red-200 dark:bg-red-950', lightClass: 'bg-red-200' },
+  red: { name: 'Vermelho', className: 'bg-red-400 dark:bg-red-950', lightClass: 'bg-red-400' },
   orange: { name: 'Laranja', className: 'bg-orange-200 dark:bg-orange-950', lightClass: 'bg-orange-200' },
   amber: { name: 'Âmbar', className: 'bg-amber-200 dark:bg-amber-950', lightClass: 'bg-amber-200' },
   emerald: { name: 'Esmeralda', className: 'bg-emerald-200 dark:bg-emerald-950', lightClass: 'bg-emerald-200' },

@@ -52,13 +52,26 @@ export const FlameIcon: React.FC<IconProps> = ({ className = "h-6 w-6" }) => (
   </svg>
 );
 
-// FIX: Add missing GoogleIcon component
-export const GoogleIcon: React.FC<IconProps> = ({ className = "h-6 w-6" }) => (
-  <svg className={className} viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-    <path fill="#4285F4" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12 c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24 c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
-    <path fill="#34A853" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.37-2.231,4.416-4.087,5.748L37,39.648 C42.228,36.383,44,30.41,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
-    <path fill="#FBBC05" d="M10.21,24c0-1.64,0.344-3.2,0.963-4.634l-5.714-4.444C4.343,17.228,4,20.533,4,24 c0,3.467,0.343,6.772,0.963,9.078l5.714-4.444C10.554,27.2,10.21,25.64,10.21,24z"/>
-    <path fill="#EA4335" d="M24,48c5.492,0,10.37-1.85,14-4.997l-5.918-4.593c-2.083,1.408-4.71,2.223-7.662,2.223 c-4.814,0-8.974-2.69-10.957-6.52l-5.83,4.539C9.027,42.748,15.93,48,24,48z"/>
-    <path fill="none" d="M0,0h48v48H0V0z"/>
+export const DumbbellIcon: React.FC<IconProps> = ({ className = "h-6 w-6" }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M4 9h2v6H4V9zm14 0h2v6h-2V9zm-2-1h-2V6h-4v2H8v8h2v2h4v-2h2V8z" />
+    </svg>
+);
+
+export const ChevronLeftIcon: React.FC<IconProps> = ({ className = "h-6 w-6" }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+  </svg>
+);
+
+export const ChevronRightIcon: React.FC<IconProps> = ({ className = "h-6 w-6" }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+  </svg>
+);
+
+export const PencilIcon: React.FC<IconProps> = ({ className = "h-6 w-6" }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.5L15.232 5.232z" />
   </svg>
 );
